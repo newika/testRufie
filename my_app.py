@@ -21,4 +21,10 @@ line1.addWidget(text, alignment = Qt.AlignLeft)
 line2.addWidget(text1, alignment = Qt.AlignLeft)
 line3.addWidget(button1, alignment = Qt.AlignCenter)
 
+line = QVBoxLayout()
+
+line.setLayout(line1)
+line.setLayout(line2)
+line.setLayout(line3)
+
 app.exec_()
