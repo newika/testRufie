@@ -1,5 +1,5 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QHBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QLayout, QPushButton, QLabel, QVBoxLayout, QHBoxLayout
 
 app = QApplication([])
 main_win = QWidget()
@@ -23,8 +23,10 @@ line3.addWidget(button1, alignment = Qt.AlignCenter)
 
 line = QVBoxLayout()
 
-line.setLayout(line1)
-line.setLayout(line2)
-line.setLayout(line3)
+line.addLayout(line1)
+line.addLayout(line2)
+line.addLayout(line3)
+
+main_win.setLayout(line)
 
 app.exec_()
