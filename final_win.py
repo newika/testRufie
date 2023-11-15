@@ -12,7 +12,7 @@ class FinalWin(QWidget):
     def __init__(self, exp):
         super().__init__()
         self.exp = exp
-        self.initUI()
+        self.info()
         self.set_appear()
         self.show()
     def results(self):
